@@ -171,7 +171,7 @@ interactive_v2ray_config() {
     # Run v2ray in interactive mode for configuration
     # This will prompt user for protocol, port, and other settings
     # v2ray 2>&1 | tee -a "$LOG_FILE"
-    v2ray port vmess 52821
+    v2ray port vmess 52821 | tee -a "$LOG_FILE"
 
     print_separator
 }
