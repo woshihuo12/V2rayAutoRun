@@ -68,7 +68,8 @@ install_v2ray() {
     fi
 
     log_info "Running V2ray official installer script..."
-    bash <(wget -qO- -o- https://git.io/v2ray.sh) 2>&1 | tee -a "$LOG_FILE"
+    # bash <(wget -qO- -o- https://git.io/v2ray.sh) 2>&1 | tee -a "$LOG_FILE"
+    bash <(wget -qO- -o- https://raw.githubusercontent.com/woshihuo12/v2ray/master/install.sh) 2>&1 | tee -a "$LOG_FILE"
 
     if command -v v2ray &> /dev/null; then
         log_success "V2ray installed successfully"
